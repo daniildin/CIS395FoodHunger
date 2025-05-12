@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Food Support Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.15;
+    }
+    .card-header {
+      background-color: #ff9900 !important;
+      color: white !important;
+    }
+    .card-body a i {
+      color: #ff9900 !important;
+    }
+    .header-contact {
+      font-size: 1.15rem;
+      color: white;
+    }
+    .header-bar {
+      background-color: #0033a0;
+      padding: 0.5rem 1rem;
+    }
+    .dashboard-section {
+      min-height: 70vh;
+    }
+    .about-section {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-section h3 {
+      color: #0033a0;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      font-size: 1.1rem;
+      color: #333333;
+    }
+    .about-section video.video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.15;
+    }
+    .about-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    footer {
+      background-color: #003366;
+      padding: 40px 0;
+    }
+    footer p, footer small {
+      color: #ffffff !important;
+    }
+    .header-bar .col-md-4.text-center img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+    .header-bar .fw-bold {
+      font-size: 1.35rem;
+    }
+    .header-bar .text-start div:last-child {
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body style="background-color: #f5f5f5; font-family: 'Metropolis', sans-serif; min-height: 100vh; display: flex; flex-direction: column;">
+  <video autoplay muted loop class="video-background">
+    <source src="videos/charity.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header Contact Info -->
+  <div class="header-bar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-start text-white">
+          <div class="fw-bold">BMCC Food Support</div>
+          <div style="color: #ffcc00;">Healthy Food Deficit Project</div>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="index.html">
+            <img src="images/header2.png" alt="BMCC Logo">
+          </a>
+        </div>
+        <div class="col-md-4 text-end header-contact">
+          <div><i class="bi-geo-alt me-1"></i> Borough of Manhattan Community College, NY</div>
+          <div><i class="bi-envelope me-1"></i> <a href="mailto:foodbmcc@info.edu" class="text-white">foodbmcc@info.edu</a></div>
+          <div><i class="bi-telephone me-1"></i> 212-555-0123</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <main style="flex: 1 0 auto;">
+    <section class="py-5 dashboard-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 style="color: #0033a0; font-weight: 700;">Student Food Support Dashboard</h2>
+          <p class="lead">Manage student resources and meal programs</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Students Management -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header fw-bold">
+                <i class="bi-person-fill me-2"></i>Students Management
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><a href="students/insertStudent.html" class="text-dark"><i class="bi-plus-circle me-2"></i>Register Student</a></li>
+                  <li><a href="students/displayStudents.php" class="text-dark"><i class="bi-table me-2"></i>View All Students</a></li>
+                  <li><a href="students/deleteStudent.html" class="text-dark"><i class="bi-trash me-2"></i>Delete Student</a></li>
+                  <li><a href="students/updateStudent.html" class="text-dark"><i class="bi-pencil-square me-2"></i>Update Student</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meals Management -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header fw-bold">
+                <i class="bi-basket-fill me-2"></i>Meals Management
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><a href="meals/insertMeal.html" class="text-dark"><i class="bi-plus-circle me-2"></i>Add New Meal</a></li>
+                  <li><a href="meals/displayMeals.php" class="text-dark"><i class="bi-table me-2"></i>View All Meals</a></li>
+                  <li><a href="meals/deleteMeal.html" class="text-dark"><i class="bi-trash me-2"></i>Delete Meal</a></li>
+                  <li><a href="meals/updateMeal.html" class="text-dark"><i class="bi-pencil-square me-2"></i>Update Meal</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Volunteers Management -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header fw-bold">
+                <i class="bi-people-fill me-2"></i>Volunteers Management
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><a href="volunteers/insertVolunteer.html" class="text-dark"><i class="bi-plus-circle me-2"></i>Register Volunteer</a></li>
+                  <li><a href="volunteers/displayVolunteers.php" class="text-dark"><i class="bi-table me-2"></i>View All Volunteers</a></li>
+                  <li><a href="volunteers/deleteVolunteer.html" class="text-dark"><i class="bi-trash me-2"></i>Delete Volunteer</a></li>
+                  <li><a href="volunteers/updateVolunteer.html" class="text-dark"><i class="bi-pencil-square me-2"></i>Update Volunteer</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal Preparation -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header fw-bold">
+                <i class="bi-clipboard-check me-2"></i>Meal Preparation
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><a href="meal_prep/insertMealPrep.html" class="text-dark"><i class="bi-plus-circle me-2"></i>Log Meal Prep</a></li>
+                  <li><a href="meal_prep/displayMealPrep.php" class="text-dark"><i class="bi-table me-2"></i>View Meal Prep Logs</a></li>
+                  <li><a href="meal_prep/deleteMealPrep.html" class="text-dark"><i class="bi-trash me-2"></i>Delete Meal Prep</a></li>
+                  <li><a href="meal_prep/updateMealPrep.html" class="text-dark"><i class="bi-pencil-square me-2"></i>Update Meal Prep</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Card Section -->
+<div class="row justify-content-center mt-5">
+  <div class="col-md-10">
+    <div class="card shadow-sm border-0">
+      <div class="card-header fw-bold text-white" style="background-color: #0033a0;">
+        <i class="bi-info-circle-fill me-2"></i> About This Project
+      </div>
+      <div class="card-body">
+        <p class="mb-0" style="font-size: 1.05rem;">
+          The Student Food Support Dashboard is part of the Healthy Food Deficit Project, developed by BMCC CIS395 student. This platform helps manage essential resources such as students, volunteers, meals, and preparation logs to support food-insecure students across campus. The goal is to streamline food distribution and ensure no student goes hungry.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+  </main>
+
+  <footer class="text-center py-5 mt-auto">
+    <p class="mb-0">
+      Healthy Food Deficit Project — BMCC CIS395 Final Project<br>
+      <small>&copy; 2025 Borough of Manhattan Community College. All rights reserved.</small>
+    </p>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/click-scroll.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
